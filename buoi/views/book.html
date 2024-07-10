@@ -1,0 +1,28 @@
+
+
+<div>
+    <h1>{{title}}</h1>
+    <a href="#!/add">
+        <button>Thêm mới</button>
+    </a>
+    <table class="table">
+        <tr>
+            <td>ID</td>
+            <td>Tên</td>
+            <td>Năm Sinh</td>
+            <td>Chuyên ngành</td>
+        </tr>
+        
+        <tr ng-repeat="item in books1">
+            <td>{{item.id}}</td>
+            <td>{{item.ten}}</td>
+            <td>{{item.namsinh}}</td>
+            <td>{{item.chuyennganh}}</td>
+            <td>
+                <button ng-click="delete(item.id)">Xóa</button>
+            </td>
+        </tr>
+    </table>
+</div>
+
+</html>

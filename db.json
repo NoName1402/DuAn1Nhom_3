@@ -1,0 +1,21 @@
+{
+  "student": [
+    {
+      "ten": "Lưu Thị Hải Yến",
+      "namsinh": "2003",
+      "chuyennganh": "CNTT",
+      "id": "64fe"
+    },
+    {
+      "ten": "Đỗ Đức Viêt",
+      "namsinh": "2004",
+      "chuyennganh": "IT"
+    },
+    {
+      "id": "b445",
+      "ten": "Khanh",
+      "namsinh": "2004",
+      "chuyennganh": "IT"
+    }
+  ]
+}

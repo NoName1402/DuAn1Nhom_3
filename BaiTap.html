@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="./libs/angular.min.js"></script>
+    <script src="./libs/angular-route.js"></script>
+</head>
+<body ng-app="myApp">
+    <div ng-controller="myCtrl">
+        <p >               
+                <h1 ng-repeat="item in a">{{item}}</h1>
+        </p>
+            
+    </div>
+    <div ng-controller="myCtrl1">
+            <table border="1">
+                <tr>
+                    <th>Game</th>
+                    <th>Thể thao</th>
+                    <th>Ca Hat</th>
+                </tr>
+                <tr ng-repeat="item in soThich">
+                    <td>{{item.game}}</td>
+                    <td>{{item.thethao}}</td>
+                    <td>{{item.cahat}}</td>
+                </tr>
+            </table>
+            
+    </div>
+    <br>
+    <div ng-controller="myCtrl2">
+        <input type="text" ng-model="a">
+        <button ng-click="nhap()">Input</button>
+        <p>Kết Quả Vừa Nhập : {{kqvn}}</p>
+    </div>
+    
+    <script >
+        angular.module("myApp",[])
+        .controller("myCtrl", function($scope){
+            $scope.a=[
+                "Nam","Anh","Ha", "Linh", "Tuan"
+            ]
+        })
+
+        .controller("myCtrl1", function($scope){
+            $scope.soThich=[
+                {
+                    game : "free fire",
+                    thethao : "ngủ",
+                    cahat : "Không biết hát"
+                },
+                {
+                    game : "free fire",
+                    thethao : "ngủ",
+                    cahat : "Không biết hát"
+                },
+                {
+                    game : "free fire",
+                    thethao : "ngủ",
+                    cahat : "Không biết hát"
+                }
+
+            ]
+        })
+        .controller("myCtrl2", function($scope){
+            $scope.nhap = function(){
+                $scope.kqvn=$scope.a
+            };
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <script src="./libs/angular.min.js"></script>
+    <script src="./libs/angular-route.js"></script>
+</head>
+<body ng-app="myApp">
+
+    <div ng-controller = "myCtrl">
+        <h1>{{nyc.ten}}</h1>
+    </div>
+
+    <div ng-controller = "myCtrl2">
+        <h1>{{nym[0]}}</h1>
+    </div>
+    <div ng-controller =myCtrl3>
+        <h3 ng-bind="welcome"></h3>
+
+        <input ng-model="welcome" type="text">
+    </div>
+    <script>
+        angular.module("myApp",[])
+        .controller("myCtrl",function($scope){
+            $scope.nyc= {
+                ten : "Lan",
+                tuoi : 20,
+                diachi : "Ha Nôi",
+               
+
+            }
+                 
+        })
+        .controller("myCtrl2",function($scope){
+            $scope.nym = [
+                "Kieu mai", "cau dien"
+
+            ]
+        })
+
+        .controller("myCtrl3",function($scope){
+            $scope.welcome = "Xin chào"
+        })
+
+        
+    </script>
+    
+</body>
+</html>
